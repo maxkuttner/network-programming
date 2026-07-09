@@ -35,6 +35,7 @@ int main(void)
     // convert a ip4 address string to binary representation
     // returns 1 if the address could be converted and is valid
     // o.w. returns 0
+    // Note: pton stands for "presentation to network" or "printable to network"
     if (inet_pton(AF_INET, "192.168.1.42", &ipv4_addr.sin_addr) <= 0) {
         perror("inet_pton IPv4");
         return 1;
