@@ -45,6 +45,7 @@ int main(void)
     char ipv4_string[INET_ADDRSTRLEN];
 
     // convert a binary ip4 address to string representation
+    // this is basically the inverse of ``inet_pton``
     inet_ntop(AF_INET,
               &ipv4_addr.sin_addr,
               ipv4_string,
